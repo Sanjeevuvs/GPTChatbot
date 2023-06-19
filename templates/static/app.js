@@ -82,7 +82,7 @@ class Chatbox {
       this.messages.push(loadingMsg);
       this.updateChatText(chatbox);
 
-      fetch('http://127.0.0.1:5000/getRecord', {
+      fetch('templates/getRecord', {
         method: 'POST',
         body: JSON.stringify(applicationName),
         mode: 'cors',
@@ -184,7 +184,7 @@ for (const record of Recordsdf) {
   this.updateChatText(chatbox);
 
           // Send formData to the Python code
-          fetch('http://127.0.0.1:5000/submitForm', {
+          fetch('templates/submitForm', {
             method: 'POST',
             body: JSON.stringify({ 'formData': formData, 'ApplicationName': this.ApplicationName }),
             mode: 'cors',
@@ -246,7 +246,7 @@ for (const record of Recordsdf) {
   const loadingMessage = { name: 'Sanjeev', message: 'Loading...' };
   this.messages.push(loadingMessage);
   this.updateChatText(chatbox);
-      fetch('http://127.0.0.1:5000/predict', {
+      fetch('templates/predict', {
         method: 'POST',
         body: JSON.stringify({ message: text }),
         mode: 'cors',
