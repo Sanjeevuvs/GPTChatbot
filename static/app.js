@@ -82,7 +82,7 @@ class Chatbox {
       this.messages.push(loadingMsg);
       this.updateChatText(chatbox);
 
-      fetch('templates/getRecord', {
+      fetch('https://sanjeevuvs.github.io/GPTChatbot/getRecord', {
         method: 'POST',
         body: JSON.stringify(applicationName),
         mode: 'cors',
@@ -184,7 +184,7 @@ for (const record of Recordsdf) {
   this.updateChatText(chatbox);
 
           // Send formData to the Python code
-          fetch('templates/submitForm', {
+          fetch('https://sanjeevuvs.github.io/GPTChatbot/submitForm', {
             method: 'POST',
             body: JSON.stringify({ 'formData': formData, 'ApplicationName': this.ApplicationName }),
             mode: 'cors',
@@ -246,7 +246,7 @@ for (const record of Recordsdf) {
   const loadingMessage = { name: 'Sanjeev', message: 'Loading...' };
   this.messages.push(loadingMessage);
   this.updateChatText(chatbox);
-      fetch('templates/predict', {
+      fetch('https://sanjeevuvs.github.io/GPTChatbot/predict', {
         method: 'POST',
         body: JSON.stringify({ message: text }),
         mode: 'cors',
