@@ -10,7 +10,7 @@ def index_get():
     return render_template("index.html")
 
 
-@app.route("templates/predict",methods=["POST"])
+@app.route("/predict",methods=["POST"])
 def predict():
     text = request.get_json().get("message")
     response = get_response(text)
@@ -45,7 +45,3 @@ def submitForm():
     return jsonify(response)
 
 
-if __name__=="__main__":
-    app.run(debug=True)
-    #app.run(host='0.0.0.0',port='90890',debug=True)
-    #(http://127.0.0.1:25354,http://192.168.43.7:25354)
