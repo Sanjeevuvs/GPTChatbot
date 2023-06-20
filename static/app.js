@@ -246,7 +246,7 @@ for (const record of Recordsdf) {
   const loadingMessage = { name: 'Sanjeev', message: 'Loading...' };
   this.messages.push(loadingMessage);
   this.updateChatText(chatbox);
-      fetch('https://sanjeevuvs.github.io/GPTChatbot/predict', {
+      fetch('/predict', {
         method: 'POST',
         body: JSON.stringify({ message: text }),
         mode: 'cors',
