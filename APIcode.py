@@ -6,14 +6,14 @@ from WepApp import Modulewebservice as MWS
 import pandas as pd
 
 
-username="myuser"
-instance="HCLTraining"
-password="Sanuvs@143"
+username="
+instance="
+password="
 
 def CreateSessionToken():
-    username="myuser"
-    instance="HCLTraining"
-    password="Sanuvs@143"
+    username="
+    instance=g"
+    password="S
     Sessiontoken=GWS.create_session_token(username,instance,password)
     return Sessiontoken
 
